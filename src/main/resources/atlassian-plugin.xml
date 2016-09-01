@@ -1,0 +1,23 @@
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-logo">images/pluginLogo.png</param>
+    </plugin-info>
+
+    <!-- add our i18n resource -->
+    <resource type="i18n" name="i18n" location="pulptasks"/>
+    
+    <!-- add our web resources -->
+    <taskType name="Puppet MetaData Extractor" class="com.entertainment.bamboo.plugins.pulp.tasks.ModuleMetaDataExtractorTask" key="puppet-metadata-parser-task">
+        <category name="builder"/>
+        <category name="deployment"/>
+        <category name="test"/>
+        <description>Extract owner, name, version from metadata.json</description>
+        <configuration class="com.entertainment.bamboo.plugins.pulp.tasks.ModuleMetaDataExtractorTaskConfigurator" />
+        <resource type="freemarker" name="edit" location="com/entertainment/bamboo/plugins/puppet/editPuppetVariableTask.ftl" />
+    </taskType>
+    
+</atlassian-plugin>

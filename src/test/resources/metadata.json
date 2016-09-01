@@ -1,0 +1,41 @@
+{
+  "name": "af6140-dummytest",
+  "version": "0.1.0",
+  "author": "brothers",
+  "summary": "dummy puppet module",
+  "license": "Apache-2.0",
+  "source": "ssh://dummy",
+  "project_page": "https://example.com",
+  "issues_url": "https://jira.example.com",
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 4.3.2"
+    },
+    {
+      "name": "puppetlabs/concat",
+      "version_requirement": ">= 1.1.2"
+    },
+    {
+      "name": "puppetlabs/apache",
+      "version_requirement": ">= 1.1.1"
+    },
+    {
+      "name": "puppetlabs/ntp",
+      "version_requirement": ">= 3.2.0"
+    },
+    {
+      "name": "pdxcat/collectd",
+      "version_requirement": ">= 3.0.1"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    }
+  ]
+}
